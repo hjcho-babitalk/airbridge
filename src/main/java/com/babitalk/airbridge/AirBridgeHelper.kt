@@ -243,6 +243,6 @@ object AirBridgeHelper {
     }
 
     fun testFunction() {
-        Log.e("airBridge", "SubModule Test Code v6.0")
+        Log.e("airBridge", "SubModule Test Code v7.0")
     }
 }
