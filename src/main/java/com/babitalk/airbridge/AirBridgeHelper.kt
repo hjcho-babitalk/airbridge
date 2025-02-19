@@ -11,7 +11,6 @@ import co.ab180.airbridge.common.AirbridgeAttribute
 import co.ab180.airbridge.common.AirbridgeCategory
 
 object AirBridgeHelper {
-
     fun initializeAirbridge(
         application: Application,
         appName: String,
@@ -243,6 +242,6 @@ object AirBridgeHelper {
     }
 
     fun testFunction() {
-        Log.e("airBridge", "SubModule Test Code v8.0")
+        Log.e("airBridge", "SubModule Test Code v9.0")
     }
 }
