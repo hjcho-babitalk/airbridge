@@ -1,9 +1,11 @@
 package com.babitalk.airbridge
 
 import android.app.Application
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.util.Log
+import android.widget.Toast
 import co.ab180.airbridge.Airbridge
 import co.ab180.airbridge.AirbridgeLogLevel
 import co.ab180.airbridge.AirbridgeOptionBuilder
@@ -241,7 +243,8 @@ object AirBridgeHelper {
         )
     }
 
-    fun testFunction() {
+    fun testFunction(context: Context) {
+        Toast.makeText(context, "SubModule Test Code v11.0", Toast.LENGTH_SHORT).show()
         Log.e("airBridge", "SubModule Test Code v11.0")
     }
 }
