@@ -61,7 +61,7 @@ task checkoutBranchAndTag(type: Exec) {
     commandLine 'git', 'checkout', branchName
     doLast {
         exec {
-            commandLine 'git', 'pull', 'origin', branchName
+            commandLine 'git', 'pull'
         }
 
         // Checkout the specified tag
