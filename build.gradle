@@ -54,8 +54,21 @@ dependencies {
     implementation libs.airbridge
 }
 
-task checkoutTag(type: Exec) {
-    commandLine 'git', 'checkout', 'tags/' + project.AIRBRIDGE_TAG_NAME
+task checkoutBranchAndTag(type: Exec) {
+    def branchName = project.AIRBRIDGE_BRANCH_NAME
+    def tagName = project.AIRBRIDGE_TAG_NAME
+
+    commandLine 'git', 'checkout', branchName
+    doLast {
+        exec {
+            commandLine 'git', 'pull', 'origin', branchName
+        }
+
+        // Checkout the specified tag
+        exec {
+            commandLine 'git', 'checkout', 'tags/' + tagName
+        }
+    }
 }
 
-preBuild.dependsOn checkoutTag
+preBuild.dependsOn checkoutBranchAndTag

@@ -244,7 +244,7 @@ object AirBridgeHelper {
     }
 
     fun testFunction(context: Context) {
-        Toast.makeText(context, "SubModule Test Code v11.0", Toast.LENGTH_SHORT).show()
-        Log.e("airBridge", "SubModule Test Code v11.0")
+        Toast.makeText(context, "SubModule Test Code v13.0", Toast.LENGTH_SHORT).show()
+        Log.e("airBridge", "SubModule Test Code v13.0")
     }
 }
