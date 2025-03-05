@@ -53,3 +53,9 @@ dependencies {
 
     implementation libs.airbridge
 }
+
+task checkoutTag(type: Exec) {
+    commandLine 'git', 'checkout', 'tags/' + project.AIRBRIDGE_TAG_NAME
+}
+
+preBuild.dependsOn checkoutTag
